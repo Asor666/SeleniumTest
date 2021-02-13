@@ -1,6 +1,6 @@
 package com.sorokinartem;
 
-import org.junit.After;
+
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -43,10 +43,14 @@ public class TestLogin {
         loginPage.clickSignInBtn();
 
     }
+
     @AfterClass
     public static void tearDown(){
+        /*нажимаем иконку меню профиля*/
         profilePage.openMenuProfile();
+        /*нажимаем кнопку SignOut*/
         profilePage.userLogout();
+        /*закрываем браузер*/
         driver.quit();
     }
 
